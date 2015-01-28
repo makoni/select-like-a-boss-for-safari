@@ -44,6 +44,8 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>https://cdn.rawgit.com/makoni/select-like-a-boss-for-safari/master/update.plist</string>
 	<key>Website</key>
 	<string>https://github.com/makoni/select-like-a-boss-for-safari</string>
 </dict>
