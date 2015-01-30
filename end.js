@@ -93,7 +93,8 @@ window.SelectLikeABoss = window.SelectLikeABoss || (function() {
 	var movable;
 	var s = document.getSelection();
 	var mainMouseDownHandler = function(e) {
-		if (e.which < 2) {
+		var tagName = e.target.tagName.toUpperCase();
+		if (e.which < 2 && tagName === 'A') {
 			resetVars();
 			var x = e.clientX;
 			var y = e.clientY;
