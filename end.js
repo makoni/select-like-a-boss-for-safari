@@ -25,23 +25,32 @@
 	'use strict';
 
 	function getCurrentAnchor(node) {
-		if		(node.href)			return node;
-		else if (!node.parentNode)	return null;
-		else						return getCurrentAnchor( node.parentNode );
+		if (node.href) {
+			return node;
+		}
+		else if (!node.parentNode) {
+			return null;
+		}
+		
+		return getCurrentAnchor( node.parentNode );
 	};
 	var stopEvent = function(e) {
 		return e.preventDefault(), e.stopPropagation(), false;
 	};
 	var browser = (function() {
 		var w = typeof InstallTrigger === 'undefined';
-		return {getRangeFromPoint: function(x, y) {
-				if (w) return document.caretRangeFromPoint(x, y);
-				
+		return {
+			getRangeFromPoint: function(x, y) {
+				if (w) {
+					return document.caretRangeFromPoint(x, y);
+				}				
 				var range = document.createRange();
 				var p = document.caretPositionFromPoint(x, y);
 				range.setStart(p.offsetNode, p.offset);
 				return range;
-			},userSelect: ((w ? '-webkit-' : '-moz-') + 'user-select')}
+			},
+			userSelect: ((w ? '-webkit-' : '-moz-') + 'user-select')
+		}
 	})();
 	var _letUserSelect = (function() {
 		var o = [{p: browser.userSelect,v: 'text'}, {p: 'outline-width',v: 0}];
@@ -64,11 +73,16 @@
 		}
 	})();
 	var _bind = function(evt, bind) {
-		if (bind === undefined)	bind = true;
-		if (evt.constructor !== Array) evt = [evt];
+		if (bind === undefined)	{
+			bind = true;
+		}
+		if (evt.constructor !== Array) {
+			evt = [evt];
+		}
 		var method = bind ? 'addEventListener' : 'removeEventListener';
-		for (var i = 0, len = evt.length; i < len; i += 1)
+		for (var i = 0, len = evt.length; i < len; i += 1) {
 			document[method](evt[i], handlers[evt[i]], true);
+		}
 	};
 	var _unbind = function(evt) {
 		_bind(evt, false);
@@ -85,14 +99,17 @@
 	var movable;
 	var s = document.getSelection();
 	var mainMouseDownHandler = function(e) {
-		if (e.which !== 1 || getCurrentAnchor(e.target) === null) return; // LMB on links only
-		
+		if (e.which !== 1 || getCurrentAnchor(e.target) === null) {
+			return; // LMB on links only
+		}		
 		resetVars();
 		var x = e.clientX;
 		var y = e.clientY;
 		if (s.type === 'Range') {
 			var range = browser.getRangeFromPoint(x, y);
-			if (range && s.getRangeAt(0).isPointInRange(range.startContainer, range.startOffset)) return;
+			if (range && s.getRangeAt(0).isPointInRange(range.startContainer, range.startOffset)) {
+				return;
+			}
 		}
 		_letUserSelect();
 		var n = getCurrentAnchor(e.target);
@@ -116,7 +133,9 @@
 						return;
 					}
 				}
-				else movable = null;
+				else  {
+					movable = null;
+				}
 			}
 			var x = e.clientX;
 			var y = e.clientY;
@@ -141,25 +160,35 @@
 			}
 			if (userSelecting) {
 				var range = browser.getRangeFromPoint(x, y);
-				if (range) s.extend(range.startContainer, range.startOffset);
+				if (range) {
+					s.extend(range.startContainer, range.startOffset);
+				}
 			}
 		},
 		dragstart: function(e) {
 			_unbind('dragstart');
-			if (userSelecting) return stopEvent(e);
+			if (userSelecting) {
+				return stopEvent(e);
+			}
 		},
 		mouseup: function(e) {
 			_unbind(['mousemove', 'mouseup', 'dragstart', 'dragend']);
-			if (!userSelecting && needStopClick) needStopClick = false;
+			if (!userSelecting && needStopClick) {
+				needStopClick = false;
+			}
 			setTimeout(function() {	_unbind('click') }, 111);
-			if (s.type !== 'Range') _letUserSelect();
+			if (s.type !== 'Range') {
+				_letUserSelect();
+			}
 		},
 		dragend: function(e) {
 			_unbind(['dragend', 'mousemove', 'mouseup']);
 		},
 		click: function(e) {
 			_unbind('click');
-			if (needStopClick) return stopEvent(e);
+			if (needStopClick) {
+				return stopEvent(e);
+			}
 		}};
 	
 	document.addEventListener('mousedown', mainMouseDownHandler, true);
