@@ -7,7 +7,7 @@ Extension for Safari that allows you to select text inside links.
 
 [Install](https://cdn.rawgit.com/makoni/select-like-a-boss-for-safari/master/select-like-a-boss-for-safari.safariextz)
 
-Based on Chrome extension Select like a Boss by Dzianis Rusak. 
+Based on Chrome extension Select like a Boss by Dzianis Rusak. This is just repack of JavaScript code of Dzianis Rusak to make Safari users happy too.
 
 [ru]
 Расширение для Safari, которое позволяет выделять текст внутри ссылки.
@@ -16,4 +16,4 @@ Based on Chrome extension Select like a Boss by Dzianis Rusak.
 
 [Установить](https://cdn.rawgit.com/makoni/select-like-a-boss-for-safari/master/select-like-a-boss-for-safari.safariextz)
 
-Основано на расширении для Chrome Select like a Boss от Dzianis Rusak.
+Основано на расширении для Chrome Select like a Boss от Dzianis Rusak. Этот репозиторий - просто перепаковка JavaScript-кода Dzianis Rusak, чтобы пользователи Safari тоже были счастливы.
