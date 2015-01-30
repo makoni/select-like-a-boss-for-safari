@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.1</string>
 	<key>Chrome</key>
 	<dict/>
 	<key>Content</key>
@@ -29,7 +29,7 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Extension that allows you to select text inside of links. Just like in old Opera browser.</string>
+	<string>Extension that allows you to select text inside of links. Code by Dzianis Rusak.</string>
 	<key>DeveloperIdentifier</key>
 	<string>345VKAJA5N</string>
 	<key>ExtensionInfoDictionaryVersion</key>
