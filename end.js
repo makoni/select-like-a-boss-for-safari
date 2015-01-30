@@ -92,30 +92,33 @@ window.SelectLikeABoss = window.SelectLikeABoss || (function() {
 	};
 	var movable;
 	var s = document.getSelection();
+	function isLink(node){
+		if		(node.href)			return true;
+		else if (!node.parentNode)	return false;
+		else						return isLink( node.parentNode );
+	}
 	var mainMouseDownHandler = function(e) {
-		if (e.which < 2) {
-			resetVars();
-			var x = e.clientX;
-			var y = e.clientY;
-			if (s.type === 'Range') {
-				var range = browser.getRangeFromPoint(x, y);
-				if (range && s.getRangeAt(0).isPointInRange(range.startContainer, range.startOffset))
-					return
-			}
-			_letUserSelect();
-			var t = e.target;
-			var n = getCurrentAnchor(t);
-			if (!n) {
-				n = t.nodeType !== 3 ? t : t.parentNode
-			}
-			if (n.constructor === HTMLTextAreaElement || n.constructor === HTMLCanvasElement || n.textContent === '')
-				return;
-			var rect = n.getBoundingClientRect();
-			movable = {n: n,x: Math.round(rect.left),y: Math.round(rect.top),c: 0};
-			cursor = {x: x,y: y};
-			_bind(['mousemove', 'mouseup', 'dragend', 'dragstart']);
-			_letUserSelect(n)
+		if (e.which !== 1 || !isLink(e.target)) return; // LMB on links only
+		
+		resetVars();
+		var x = e.clientX;
+		var y = e.clientY;
+		if (s.type === 'Range') {
+			var range = browser.getRangeFromPoint(x, y);
+			if (range && s.getRangeAt(0).isPointInRange(range.startContainer, range.startOffset)) return;
 		}
+		_letUserSelect();
+		var t = e.target;
+		var n = getCurrentAnchor(t);
+		if (!n) {
+			n = t.nodeType !== 3 ? t : t.parentNode;
+		}
+		if (n.constructor === HTMLTextAreaElement || n.constructor === HTMLCanvasElement || n.textContent === '') return;
+		var rect = n.getBoundingClientRect();
+		movable = {n: n,x: Math.round(rect.left),y: Math.round(rect.top),c: 0};
+		cursor = {x: x,y: y};
+		_bind(['mousemove', 'mouseup', 'dragend', 'dragstart']);
+		_letUserSelect(n);
 	};
 	var D = 3;
 	var K = 0.8;
