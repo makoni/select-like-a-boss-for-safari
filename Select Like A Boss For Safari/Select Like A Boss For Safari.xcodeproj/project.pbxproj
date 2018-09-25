@@ -16,7 +16,6 @@
 		2417ABCD21592FC900E30A58 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417ABCC21592FC900E30A58 /* SafariExtensionViewController.swift */; };
 		2417ABD021592FC900E30A58 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2417ABCE21592FC900E30A58 /* SafariExtensionViewController.xib */; };
 		2417ABD321592FC900E30A58 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 2417ABD221592FC900E30A58 /* script.js */; };
-		2417ABD521592FC900E30A58 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2417ABD421592FC900E30A58 /* ToolbarItemIcon.pdf */; };
 		2417ABD921592FC900E30A58 /* Select Like A Boss.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2417ABC521592FC900E30A58 /* Select Like A Boss.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		2417ABCF21592FC900E30A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		2417ABD121592FC900E30A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2417ABD221592FC900E30A58 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		2417ABD421592FC900E30A58 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		2417ABD621592FC900E30A58 /* Select_Like_A_Boss.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Select_Like_A_Boss.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +128,6 @@
 				2417ABCE21592FC900E30A58 /* SafariExtensionViewController.xib */,
 				2417ABD121592FC900E30A58 /* Info.plist */,
 				2417ABD221592FC900E30A58 /* script.js */,
-				2417ABD421592FC900E30A58 /* ToolbarItemIcon.pdf */,
 				2417ABD621592FC900E30A58 /* Select_Like_A_Boss.entitlements */,
 			);
 			path = "Select Like A Boss";
@@ -226,7 +223,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2417ABD521592FC900E30A58 /* ToolbarItemIcon.pdf in Resources */,
 				2417ABD021592FC900E30A58 /* SafariExtensionViewController.xib in Resources */,
 				2417ABD321592FC900E30A58 /* script.js in Resources */,
 			);
