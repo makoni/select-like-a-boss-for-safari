@@ -707,8 +707,35 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Select_Like_A_Boss_For_Safari" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="wcj-94-4G8">
+                                <rect key="frame" x="107" y="78" width="186" height="186"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="CQY-Xd-bRx"/>
+                                    <constraint firstAttribute="width" secondItem="wcj-94-4G8" secondAttribute="height" multiplier="1:1" id="H8N-cG-P0U"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="image" id="BdO-iu-Tan"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bI4-7r-YFP">
+                                <rect key="frame" x="83" y="34" width="234" height="51"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" id="kle-Hp-97y">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">To enable extension:
+1. Safari -&gt; Preferences -&gt; Extensions
+2. Check Select Like A Boss</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wcj-94-4G8" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="964-L4-o3f"/>
+                            <constraint firstItem="bI4-7r-YFP" firstAttribute="top" secondItem="wcj-94-4G8" secondAttribute="bottom" constant="-4" id="KCG-Y5-aWy"/>
+                            <constraint firstItem="bI4-7r-YFP" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="tnY-TO-eDg"/>
+                            <constraint firstItem="wcj-94-4G8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="9" id="xu8-b3-kEE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -716,4 +743,7 @@
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image" width="1024" height="1024"/>
+    </resources>
 </document>
