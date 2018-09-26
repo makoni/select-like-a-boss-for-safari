@@ -1,5 +1,6 @@
 # select-like-a-boss-for-safari
-![Select like a Boss extension for Safari](http://arm1.ru/img/uploaded/images/select-like-a-boss-dlya-safari.gif "Screenshot")
+![Select like a Boss extension for Safari](https://spaceinbox.me/images/select-like-a-boss.png "Screenshot")
+
 [en]
 Extension for Safari that allows you to select text inside links.
 - when you want to select link or part of link ↔ just select it like a regular text; 
@@ -17,3 +18,5 @@ Based on Chrome extension Select like a Boss by Dzianis Rusak. This is just repa
 [Установить в Mac App Store](https://itunes.apple.com/ru/app/select-like-a-boss/id1437310115?mt=12)
 
 Основано на расширении для Chrome Select like a Boss от Dzianis Rusak. Этот репозиторий - просто перепаковка JavaScript-кода Dzianis Rusak, чтобы пользователи Safari тоже были счастливы.
+
+![Select like a Boss extension for Safari](http://arm1.ru/img/uploaded/images/select-like-a-boss-dlya-safari.gif "Screenshot")
