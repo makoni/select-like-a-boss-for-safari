@@ -1,4 +1,4 @@
-# select-like-a-boss-for-safari
+# Select Like A Boss for Safari
 ![Select like a Boss extension for Safari](https://spaceinbox.me/images/select-like-a-boss.png "Screenshot")
 
 [en]
