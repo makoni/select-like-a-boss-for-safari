@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>XPC!</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSExtension</key>
@@ -46,8 +46,8 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2018 Sergei Armodin. All rights reserved.</string>
+	<string>Copyright © 2020 Sergei Armodin. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
-	<string>This Safari Extension allows you to select text inside links</string>
+	<string>This Safari Extension allows you to select text inside links. Source code is available on GitHub: https://github.com/makoni/select-like-a-boss-for-safari</string>
 </dict>
 </plist>

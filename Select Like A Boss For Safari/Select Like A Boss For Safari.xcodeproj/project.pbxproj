@@ -405,12 +405,14 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
 				INFOPLIST_FILE = "Select Like A Boss For Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -426,12 +428,14 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
 				INFOPLIST_FILE = "Select Like A Boss For Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -444,6 +448,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss/Select_Like_A_Boss.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
 				INFOPLIST_FILE = "Select Like A Boss/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,6 +456,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari.Select-Like-A-Boss";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -464,6 +470,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss/Select_Like_A_Boss.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
 				INFOPLIST_FILE = "Select Like A Boss/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,6 +478,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari.Select-Like-A-Boss";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

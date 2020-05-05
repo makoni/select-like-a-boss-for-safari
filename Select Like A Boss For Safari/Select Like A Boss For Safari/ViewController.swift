@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SafariServices
 
 class ViewController: NSViewController {
 
@@ -21,7 +22,14 @@ class ViewController: NSViewController {
 		// Update the view, if already loaded.
 		}
 	}
-
+	@IBAction func goToPreferenciesButtonTouched(_ sender: Any) {
+		SFSafariApplication.showPreferencesForExtension(withIdentifier: "me.spaceinbox.Select-Like-A-Boss-For-Safari.Select-Like-A-Boss") { (error) in
+			if let error = error {
+				print(error.localizedDescription)
+			}
+		}
+	}
+	
 
 }
 
