@@ -179,14 +179,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Sergei Armodin";
 				TargetAttributes = {
 					2417ABAD21592FB900E30A58 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1140;
 					};
 					2417ABC421592FC900E30A58 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -400,6 +402,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss For Safari/Select_Like_A_Boss_For_Safari.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
@@ -410,7 +413,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -420,6 +423,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss For Safari/Select_Like_A_Boss_For_Safari.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
@@ -430,7 +434,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -438,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss/Select_Like_A_Boss.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
 				INFOPLIST_FILE = "Select Like A Boss/Info.plist";
@@ -449,7 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari.Select-Like-A-Boss";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -457,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss/Select_Like_A_Boss.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
 				INFOPLIST_FILE = "Select Like A Boss/Info.plist";
@@ -468,7 +474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari.Select-Like-A-Boss";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
