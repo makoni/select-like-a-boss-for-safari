@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -196,7 +196,7 @@
 				};
 			};
 			buildConfigurationList = 2417ABA921592FB900E30A58 /* Build configuration list for PBXProject "Select Like A Boss For Safari" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -411,7 +411,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
 				INFOPLIST_FILE = "Select Like A Boss For Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -434,7 +434,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
 				INFOPLIST_FILE = "Select Like A Boss For Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,7 +454,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss/Select_Like_A_Boss.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
 				INFOPLIST_FILE = "Select Like A Boss/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,7 +476,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss/Select_Like_A_Boss.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 345VKAJA5N;
 				INFOPLIST_FILE = "Select Like A Boss/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
