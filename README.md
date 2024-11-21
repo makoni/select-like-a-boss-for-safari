@@ -1,5 +1,5 @@
 # Select Like A Boss for Safari
-![Select like a Boss extension for Safari](https://spaceinbox.me/images/select-like-a-boss.png "Screenshot")
+![Select like a Boss extension for Safari](https://spaceinbox.me/images/select-like-a-boss.webp "Screenshot")
 
 [en]
 Extension for Safari that allows you to select text inside links.
