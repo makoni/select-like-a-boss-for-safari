@@ -11,8 +11,30 @@ import SafariServices
 
 class ViewController: NSViewController {
 	@IBOutlet private weak var instructionsLabel: NSTextField!
+	@IBOutlet private weak var openPreferencesButton: NSButton!
 	
 	private let extensionIdentifier = "me.spaceinbox.Select-Like-A-Boss-For-Safari.Select-Like-A-Boss"
+	private let enableInstructionsText = NSLocalizedString(
+		"host.instructions.enable",
+		tableName: nil,
+		bundle: .main,
+		value: "Enable in Safari:\n1. Open Safari -> Preferences -> Extensions\n2. Turn on Select Like A Boss",
+		comment: "Instructions shown when Safari extension is not enabled."
+	)
+	private let extensionEnabledText = NSLocalizedString(
+		"host.instructions.enabled",
+		tableName: nil,
+		bundle: .main,
+		value: "Safari extension is enabled. You are all set.",
+		comment: "Confirmation shown when Safari extension is enabled."
+	)
+	private let openExtensionsButtonTitle = NSLocalizedString(
+		"host.button.openExtensions",
+		tableName: nil,
+		bundle: .main,
+		value: "Open Safari Extensions",
+		comment: "Button title that opens Safari extension preferences."
+	)
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -22,6 +44,7 @@ class ViewController: NSViewController {
 			name: NSApplication.didBecomeActiveNotification,
 			object: nil
 		)
+		openPreferencesButton.title = openExtensionsButtonTitle
 		updateInstructionsFromExtensionState()
 	}
 	
@@ -44,22 +67,14 @@ class ViewController: NSViewController {
 			DispatchQueue.main.async {
 				guard let self else { return }
 				if error != nil {
-					self.instructionsLabel.stringValue = """
-					Enable in Safari:
-					1. Open Safari -> Preferences -> Extensions
-					2. Turn on Select Like A Boss
-					"""
+					self.instructionsLabel.stringValue = self.enableInstructionsText
 					return
 				}
 				
 				if state?.isEnabled == true {
-					self.instructionsLabel.stringValue = "Safari extension is enabled. You are all set."
+					self.instructionsLabel.stringValue = self.extensionEnabledText
 				} else {
-					self.instructionsLabel.stringValue = """
-					Enable in Safari:
-					1. Open Safari -> Preferences -> Extensions
-					2. Turn on Select Like A Boss
-					"""
+					self.instructionsLabel.stringValue = self.enableInstructionsText
 				}
 			}
 		}

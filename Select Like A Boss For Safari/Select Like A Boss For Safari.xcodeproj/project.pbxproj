@@ -13,12 +13,12 @@
 		2417ABB921592FBA00E30A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2417ABB721592FBA00E30A58 /* Main.storyboard */; };
 		2417ABC821592FC900E30A58 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2417ABC721592FC900E30A58 /* Cocoa.framework */; };
 		2417ABCB21592FC900E30A58 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417ABCA21592FC900E30A58 /* SafariExtensionHandler.swift */; };
-		2417ABCD21592FC900E30A58 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417ABCC21592FC900E30A58 /* SafariExtensionViewController.swift */; };
-		2417ABD021592FC900E30A58 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2417ABCE21592FC900E30A58 /* SafariExtensionViewController.xib */; };
 		2417ABD321592FC900E30A58 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 2417ABD221592FC900E30A58 /* script.js */; };
 		2417ABD921592FC900E30A58 /* Select Like A Boss.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2417ABC521592FC900E30A58 /* Select Like A Boss.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		242E56832F45A55100FF5487 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 242E56822F45A55100FF5487 /* AppIcon.icon */; };
 		24FFC9812742DF1C0027C865 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FFC9802742DF1C0027C865 /* WindowController.swift */; };
+		24FFC9822742F1A50027C865 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 24FFC9832742F1A50027C865 /* manifest.json */; };
+		24FFC9842742F5A50027C865 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 24FFC9852742F5A50027C865 /* icons */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,13 +54,13 @@
 		2417ABC521592FC900E30A58 /* Select Like A Boss.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Select Like A Boss.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2417ABC721592FC900E30A58 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2417ABCA21592FC900E30A58 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
-		2417ABCC21592FC900E30A58 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
-		2417ABCF21592FC900E30A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		2417ABD121592FC900E30A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2417ABD221592FC900E30A58 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		2417ABD621592FC900E30A58 /* Select_Like_A_Boss.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Select_Like_A_Boss.entitlements; sourceTree = "<group>"; };
 		242E56822F45A55100FF5487 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		24FFC9802742DF1C0027C865 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		24FFC9832742F1A50027C865 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		24FFC9852742F5A50027C865 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icons; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				2417ABCA21592FC900E30A58 /* SafariExtensionHandler.swift */,
-				2417ABCC21592FC900E30A58 /* SafariExtensionViewController.swift */,
-				2417ABCE21592FC900E30A58 /* SafariExtensionViewController.xib */,
 				2417ABD121592FC900E30A58 /* Info.plist */,
 				2417ABD221592FC900E30A58 /* script.js */,
+				24FFC9832742F1A50027C865 /* manifest.json */,
+				24FFC9852742F5A50027C865 /* icons */,
 				2417ABD621592FC900E30A58 /* Select_Like_A_Boss.entitlements */,
 			);
 			path = "Select Like A Boss";
@@ -222,7 +222,8 @@
 		2417ABC321592FC900E30A58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
-				2417ABD021592FC900E30A58 /* SafariExtensionViewController.xib in Resources */,
+				24FFC9822742F1A50027C865 /* manifest.json in Resources */,
+				24FFC9842742F5A50027C865 /* icons in Resources */,
 				2417ABD321592FC900E30A58 /* script.js in Resources */,
 			);
 		};
@@ -240,7 +241,6 @@
 		2417ABC121592FC900E30A58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
-				2417ABCD21592FC900E30A58 /* SafariExtensionViewController.swift in Sources */,
 				2417ABCB21592FC900E30A58 /* SafariExtensionHandler.swift in Sources */,
 			);
 		};
@@ -261,14 +261,6 @@
 				2417ABB821592FBA00E30A58 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2417ABCE21592FC900E30A58 /* SafariExtensionViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2417ABCF21592FC900E30A58 /* Base */,
-			);
-			name = SafariExtensionViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -194,6 +194,7 @@
                     </view>
                     <connections>
                         <outlet property="instructionsLabel" destination="bI4-7r-YFP" id="KW2-Zz-Pjk"/>
+                        <outlet property="openPreferencesButton" destination="DMu-bC-EB7" id="MLl-eu-5aw"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

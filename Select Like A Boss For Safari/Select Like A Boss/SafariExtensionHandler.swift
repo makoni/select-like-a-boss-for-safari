@@ -7,28 +7,27 @@
 //
 
 import SafariServices
+import os.log
 
-class SafariExtensionHandler: SFSafariExtensionHandler {
-    
-    override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
-        // This method will be called when a content script provided by your extension calls safari.extension.dispatchMessage("message").
-        page.getPropertiesWithCompletionHandler { properties in
-            print("The extension received a message (\(messageName)) from a script injected into (\(String(describing: properties?.url))) with userInfo (\(userInfo ?? [:]))")
+class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
+    func beginRequest(with context: NSExtensionContext) {
+        let request = context.inputItems.first as? NSExtensionItem
+        let message: Any?
+        if #available(iOS 15.0, macOS 11.0, *) {
+            message = request?.userInfo?[SFExtensionMessageKey]
+        } else {
+            message = request?.userInfo?["message"]
         }
+        
+        os_log(.default, "Received native message: %@", String(describing: message))
+        
+        let response = NSExtensionItem()
+        if #available(iOS 15.0, macOS 11.0, *) {
+            response.userInfo = [SFExtensionMessageKey: ["echo": message as Any]]
+        } else {
+            response.userInfo = ["message": ["echo": message as Any]]
+        }
+        
+        context.completeRequest(returningItems: [response], completionHandler: nil)
     }
-    
-    override func toolbarItemClicked(in window: SFSafariWindow) {
-        // This method will be called when your toolbar item is clicked.
-        print("The extension's toolbar item was clicked")
-    }
-    
-    override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {
-        // This is called when Safari's state changed in some way that would require the extension's toolbar item to be validated again.
-        validationHandler(true, "")
-    }
-    
-    override func popoverViewController() -> SFSafariExtensionViewController {
-        return SafariExtensionViewController.shared
-    }
-
 }

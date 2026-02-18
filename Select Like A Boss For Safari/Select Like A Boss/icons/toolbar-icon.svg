@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="802px" height="343px" viewBox="0 0 802 343" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <rect id="Rectangle" fill="#646464" fill-rule="nonzero" x="199.5" y="20" width="410" height="304"></rect>
+            <text id="BOSS" font-family="SFProText-Semibold, SF Pro Text" font-size="288" font-weight="500">
+                <tspan x="0.21875" y="274" fill="#646464">B</tspan>
+                <tspan x="196.109375" y="274" fill="#FFFFFF">OS</tspan>
+                <tspan x="611.375" y="274" fill="#646464">S</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
