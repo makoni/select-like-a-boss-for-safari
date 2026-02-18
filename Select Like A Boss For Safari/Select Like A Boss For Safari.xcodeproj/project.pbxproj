@@ -7,18 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2417ABB221592FB900E30A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417ABB121592FB900E30A58 /* AppDelegate.swift */; };
-		2417ABB421592FB900E30A58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417ABB321592FB900E30A58 /* ViewController.swift */; };
-		2417ABB621592FBA00E30A58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2417ABB521592FBA00E30A58 /* Assets.xcassets */; };
-		2417ABB921592FBA00E30A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2417ABB721592FBA00E30A58 /* Main.storyboard */; };
 		2417ABC821592FC900E30A58 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2417ABC721592FC900E30A58 /* Cocoa.framework */; };
-		2417ABCB21592FC900E30A58 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417ABCA21592FC900E30A58 /* SafariExtensionHandler.swift */; };
-		2417ABD321592FC900E30A58 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 2417ABD221592FC900E30A58 /* script.js */; };
 		2417ABD921592FC900E30A58 /* Select Like A Boss.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2417ABC521592FC900E30A58 /* Select Like A Boss.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		242E56832F45A55100FF5487 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 242E56822F45A55100FF5487 /* AppIcon.icon */; };
-		24FFC9812742DF1C0027C865 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FFC9802742DF1C0027C865 /* WindowController.swift */; };
-		24FFC9822742F1A50027C865 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 24FFC9832742F1A50027C865 /* manifest.json */; };
-		24FFC9842742F5A50027C865 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 24FFC9852742F5A50027C865 /* icons */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,23 +35,48 @@
 
 /* Begin PBXFileReference section */
 		2417ABAE21592FB900E30A58 /* Select Like A Boss For Safari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Select Like A Boss For Safari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2417ABB121592FB900E30A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2417ABB321592FB900E30A58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2417ABB521592FBA00E30A58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2417ABB821592FBA00E30A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2417ABBA21592FBA00E30A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2417ABBB21592FBA00E30A58 /* Select_Like_A_Boss_For_Safari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Select_Like_A_Boss_For_Safari.entitlements; sourceTree = "<group>"; };
 		2417ABC521592FC900E30A58 /* Select Like A Boss.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Select Like A Boss.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2417ABC721592FC900E30A58 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		2417ABCA21592FC900E30A58 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
-		2417ABD121592FC900E30A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2417ABD221592FC900E30A58 /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
-		2417ABD621592FC900E30A58 /* Select_Like_A_Boss.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Select_Like_A_Boss.entitlements; sourceTree = "<group>"; };
-		242E56822F45A55100FF5487 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
-		24FFC9802742DF1C0027C865 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
-		24FFC9832742F1A50027C865 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
-		24FFC9852742F5A50027C865 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icons; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		242E56902F45BA4C00FF5487 /* Exceptions for "Select Like A Boss" folder in "Select Like A Boss" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2417ABC421592FC900E30A58 /* Select Like A Boss */;
+		};
+		242E56A22F45BA5000FF5487 /* Exceptions for "Select Like A Boss For Safari" folder in "Select Like A Boss For Safari" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2417ABAD21592FB900E30A58 /* Select Like A Boss For Safari */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		242E568A2F45BA4C00FF5487 /* Select Like A Boss */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				242E56902F45BA4C00FF5487 /* Exceptions for "Select Like A Boss" folder in "Select Like A Boss" target */,
+			);
+			explicitFolders = (
+				icons,
+			);
+			path = "Select Like A Boss";
+			sourceTree = "<group>";
+		};
+		242E569A2F45BA5000FF5487 /* Select Like A Boss For Safari */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				242E56A22F45BA5000FF5487 /* Exceptions for "Select Like A Boss For Safari" folder in "Select Like A Boss For Safari" target */,
+			);
+			path = "Select Like A Boss For Safari";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2417ABAB21592FB900E30A58 /* Frameworks */ = {
@@ -81,8 +96,8 @@
 		2417ABA521592FB900E30A58 = {
 			isa = PBXGroup;
 			children = (
-				2417ABB021592FB900E30A58 /* Select Like A Boss For Safari */,
-				2417ABC921592FC900E30A58 /* Select Like A Boss */,
+				242E569A2F45BA5000FF5487 /* Select Like A Boss For Safari */,
+				242E568A2F45BA4C00FF5487 /* Select Like A Boss */,
 				2417ABC621592FC900E30A58 /* Frameworks */,
 				2417ABAF21592FB900E30A58 /* Products */,
 			);
@@ -97,40 +112,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2417ABB021592FB900E30A58 /* Select Like A Boss For Safari */ = {
-			isa = PBXGroup;
-			children = (
-				2417ABB121592FB900E30A58 /* AppDelegate.swift */,
-				24FFC9802742DF1C0027C865 /* WindowController.swift */,
-				2417ABB321592FB900E30A58 /* ViewController.swift */,
-				2417ABB521592FBA00E30A58 /* Assets.xcassets */,
-				2417ABB721592FBA00E30A58 /* Main.storyboard */,
-				2417ABBA21592FBA00E30A58 /* Info.plist */,
-				2417ABBB21592FBA00E30A58 /* Select_Like_A_Boss_For_Safari.entitlements */,
-				242E56822F45A55100FF5487 /* AppIcon.icon */,
-			);
-			path = "Select Like A Boss For Safari";
-			sourceTree = "<group>";
-		};
 		2417ABC621592FC900E30A58 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				2417ABC721592FC900E30A58 /* Cocoa.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2417ABC921592FC900E30A58 /* Select Like A Boss */ = {
-			isa = PBXGroup;
-			children = (
-				2417ABCA21592FC900E30A58 /* SafariExtensionHandler.swift */,
-				2417ABD121592FC900E30A58 /* Info.plist */,
-				2417ABD221592FC900E30A58 /* script.js */,
-				24FFC9832742F1A50027C865 /* manifest.json */,
-				24FFC9852742F5A50027C865 /* icons */,
-				2417ABD621592FC900E30A58 /* Select_Like_A_Boss.entitlements */,
-			);
-			path = "Select Like A Boss";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +137,9 @@
 			dependencies = (
 				2417ABD821592FC900E30A58 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				242E569A2F45BA5000FF5487 /* Select Like A Boss For Safari */,
+			);
 			name = "Select Like A Boss For Safari";
 			productName = "Select Like A Boss For Safari";
 			productReference = 2417ABAE21592FB900E30A58 /* Select Like A Boss For Safari.app */;
@@ -164,6 +154,9 @@
 				2417ABC321592FC900E30A58 /* Resources */,
 			);
 			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				242E568A2F45BA4C00FF5487 /* Select Like A Boss */,
 			);
 			name = "Select Like A Boss";
 			productName = "Select Like A Boss";
@@ -214,17 +207,11 @@
 		2417ABAC21592FB900E30A58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
-				242E56832F45A55100FF5487 /* AppIcon.icon in Resources */,
-				2417ABB621592FBA00E30A58 /* Assets.xcassets in Resources */,
-				2417ABB921592FBA00E30A58 /* Main.storyboard in Resources */,
 			);
 		};
 		2417ABC321592FC900E30A58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
-				24FFC9822742F1A50027C865 /* manifest.json in Resources */,
-				24FFC9842742F5A50027C865 /* icons in Resources */,
-				2417ABD321592FC900E30A58 /* script.js in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
@@ -233,15 +220,11 @@
 		2417ABAA21592FB900E30A58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
-				2417ABB421592FB900E30A58 /* ViewController.swift in Sources */,
-				24FFC9812742DF1C0027C865 /* WindowController.swift in Sources */,
-				2417ABB221592FB900E30A58 /* AppDelegate.swift in Sources */,
 			);
 		};
 		2417ABC121592FC900E30A58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
-				2417ABCB21592FC900E30A58 /* SafariExtensionHandler.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */
@@ -253,17 +236,6 @@
 			targetProxy = 2417ABD721592FC900E30A58 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2417ABB721592FBA00E30A58 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2417ABB821592FBA00E30A58 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2417ABBC21592FBA00E30A58 /* Debug configuration for PBXProject "Select Like A Boss For Safari" */ = {
