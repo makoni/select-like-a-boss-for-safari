@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,7 @@
 		2417ABCD21592FC900E30A58 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2417ABCC21592FC900E30A58 /* SafariExtensionViewController.swift */; };
 		2417ABD021592FC900E30A58 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2417ABCE21592FC900E30A58 /* SafariExtensionViewController.xib */; };
 		2417ABD321592FC900E30A58 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 2417ABD221592FC900E30A58 /* script.js */; };
-		2417ABD921592FC900E30A58 /* Select Like A Boss.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2417ABC521592FC900E30A58 /* Select Like A Boss.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2417ABD921592FC900E30A58 /* Select Like A Boss.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2417ABC521592FC900E30A58 /* Select Like A Boss.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		24FFC9812742DF1C0027C865 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FFC9802742DF1C0027C865 /* WindowController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,16 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2417ABDD21592FC900E30A58 /* Embed App Extensions */ = {
+		2417ABDD21592FC900E30A58 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstSubfolder = PlugIns;
 			files = (
-				2417ABD921592FC900E30A58 /* Select Like A Boss.appex in Embed App Extensions */,
+				2417ABD921592FC900E30A58 /* Select Like A Boss.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
+			name = "Embed Foundation Extensions";
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -66,18 +64,14 @@
 /* Begin PBXFrameworksBuildPhase section */
 		2417ABAB21592FB900E30A58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2417ABC221592FC900E30A58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2417ABC821592FC900E30A58 /* Cocoa.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -146,7 +140,7 @@
 				2417ABAA21592FB900E30A58 /* Sources */,
 				2417ABAB21592FB900E30A58 /* Frameworks */,
 				2417ABAC21592FB900E30A58 /* Resources */,
-				2417ABDD21592FC900E30A58 /* Embed App Extensions */,
+				2417ABDD21592FC900E30A58 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -168,8 +162,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = "Select Like A Boss";
 			productName = "Select Like A Boss";
 			productReference = 2417ABC521592FC900E30A58 /* Select Like A Boss.appex */;
@@ -181,8 +173,9 @@
 		2417ABA621592FB900E30A58 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 2630;
 				ORGANIZATIONNAME = "Sergei Armodin";
 				TargetAttributes = {
 					2417ABAD21592FB900E30A58 = {
@@ -196,7 +189,6 @@
 				};
 			};
 			buildConfigurationList = 2417ABA921592FB900E30A58 /* Build configuration list for PBXProject "Select Like A Boss For Safari" */;
-			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -204,6 +196,7 @@
 				Base,
 			);
 			mainGroup = 2417ABA521592FB900E30A58;
+			preferredProjectObjectVersion = 90;
 			productRefGroup = 2417ABAF21592FB900E30A58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -217,43 +210,35 @@
 /* Begin PBXResourcesBuildPhase section */
 		2417ABAC21592FB900E30A58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2417ABB621592FBA00E30A58 /* Assets.xcassets in Resources */,
 				2417ABB921592FBA00E30A58 /* Main.storyboard in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2417ABC321592FC900E30A58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2417ABD021592FC900E30A58 /* SafariExtensionViewController.xib in Resources */,
 				2417ABD321592FC900E30A58 /* script.js in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2417ABAA21592FB900E30A58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2417ABB421592FB900E30A58 /* ViewController.swift in Sources */,
 				24FFC9812742DF1C0027C865 /* WindowController.swift in Sources */,
 				2417ABB221592FB900E30A58 /* AppDelegate.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2417ABC121592FC900E30A58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2417ABCD21592FC900E30A58 /* SafariExtensionViewController.swift in Sources */,
 				2417ABCB21592FC900E30A58 /* SafariExtensionHandler.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -285,10 +270,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2417ABBC21592FBA00E30A58 /* Debug */ = {
+		2417ABBC21592FBA00E30A58 /* Debug configuration for PBXProject "Select Like A Boss For Safari" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -320,9 +306,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 345VKAJA5N;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -342,15 +331,17 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		2417ABBD21592FBA00E30A58 /* Release */ = {
+		2417ABBD21592FBA00E30A58 /* Release configuration for PBXProject "Select Like A Boss For Safari" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -382,9 +373,12 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 345VKAJA5N;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -397,27 +391,30 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		2417ABBF21592FBA00E30A58 /* Debug */ = {
+		2417ABBF21592FBA00E30A58 /* Debug configuration for PBXNativeTarget "Select Like A Boss For Safari" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss For Safari/Select_Like_A_Boss_For_Safari.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 345VKAJA5N;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				INFOPLIST_FILE = "Select Like A Boss For Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,22 +422,24 @@
 			};
 			name = Debug;
 		};
-		2417ABC021592FBA00E30A58 /* Release */ = {
+		2417ABC021592FBA00E30A58 /* Release configuration for PBXNativeTarget "Select Like A Boss For Safari" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss For Safari/Select_Like_A_Boss_For_Safari.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 345VKAJA5N;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				INFOPLIST_FILE = "Select Like A Boss For Safari/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,20 +447,23 @@
 			};
 			name = Release;
 		};
-		2417ABDB21592FC900E30A58 /* Debug */ = {
+		2417ABDB21592FC900E30A58 /* Debug configuration for PBXNativeTarget "Select Like A Boss" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss/Select_Like_A_Boss.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 345VKAJA5N;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				INFOPLIST_FILE = "Select Like A Boss/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari.Select-Like-A-Boss";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -470,20 +472,23 @@
 			};
 			name = Debug;
 		};
-		2417ABDC21592FC900E30A58 /* Release */ = {
+		2417ABDC21592FC900E30A58 /* Release configuration for PBXNativeTarget "Select Like A Boss" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Select Like A Boss/Select_Like_A_Boss.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 345VKAJA5N;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				INFOPLIST_FILE = "Select Like A Boss/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.spaceinbox.Select-Like-A-Boss-For-Safari.Select-Like-A-Boss";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,28 +503,25 @@
 		2417ABA921592FB900E30A58 /* Build configuration list for PBXProject "Select Like A Boss For Safari" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2417ABBC21592FBA00E30A58 /* Debug */,
-				2417ABBD21592FBA00E30A58 /* Release */,
+				2417ABBC21592FBA00E30A58 /* Debug configuration for PBXProject "Select Like A Boss For Safari" */,
+				2417ABBD21592FBA00E30A58 /* Release configuration for PBXProject "Select Like A Boss For Safari" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		2417ABBE21592FBA00E30A58 /* Build configuration list for PBXNativeTarget "Select Like A Boss For Safari" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2417ABBF21592FBA00E30A58 /* Debug */,
-				2417ABC021592FBA00E30A58 /* Release */,
+				2417ABBF21592FBA00E30A58 /* Debug configuration for PBXNativeTarget "Select Like A Boss For Safari" */,
+				2417ABC021592FBA00E30A58 /* Release configuration for PBXNativeTarget "Select Like A Boss For Safari" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		2417ABDA21592FC900E30A58 /* Build configuration list for PBXNativeTarget "Select Like A Boss" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2417ABDB21592FC900E30A58 /* Debug */,
-				2417ABDC21592FC900E30A58 /* Release */,
+				2417ABDB21592FC900E30A58 /* Debug configuration for PBXNativeTarget "Select Like A Boss" */,
+				2417ABDC21592FC900E30A58 /* Release configuration for PBXNativeTarget "Select Like A Boss" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
