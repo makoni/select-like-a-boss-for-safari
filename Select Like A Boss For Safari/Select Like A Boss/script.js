@@ -38,18 +38,26 @@
 		return e.preventDefault(), e.stopPropagation(), false;
 	};
 	var browser = (function() {
-		var w = typeof InstallTrigger === 'undefined';
+		var testStyle = document.documentElement && document.documentElement.style;
+		var userSelect = (testStyle && testStyle.webkitUserSelect !== undefined)
+			? '-webkit-user-select'
+			: 'user-select';
 		return {
 			getRangeFromPoint: function(x, y) {
-				if (w) {
+				if (document.caretPositionFromPoint) {
+					var p = document.caretPositionFromPoint(x, y);
+					if (p && p.offsetNode) {
+						var range = document.createRange();
+						range.setStart(p.offsetNode, p.offset);
+						return range;
+					}
+				}
+				if (document.caretRangeFromPoint) {
 					return document.caretRangeFromPoint(x, y);
-				}				
-				var range = document.createRange();
-				var p = document.caretPositionFromPoint(x, y);
-				range.setStart(p.offsetNode, p.offset);
-				return range;
+				}
+				return null;
 			},
-			userSelect: ((w ? '-webkit-' : '-moz-') + 'user-select')
+			userSelect: userSelect
 		}
 	})();
 	var _letUserSelect = (function() {
@@ -76,7 +84,7 @@
 		if (bind === undefined)	{
 			bind = true;
 		}
-		if (evt.constructor !== Array) {
+		if (!Array.isArray(evt)) {
 			evt = [evt];
 		}
 		var method = bind ? 'addEventListener' : 'removeEventListener';
@@ -99,7 +107,8 @@
 	var movable;
 	var s = document.getSelection();
 	var mainMouseDownHandler = function(e) {
-		if (e.which !== 1 || getCurrentAnchor(e.target) === null) {
+		var isPrimaryButton = e.button !== undefined ? e.button === 0 : e.which === 1;
+		if (!isPrimaryButton || getCurrentAnchor(e.target) === null) {
 			return; // LMB on links only
 		}		
 		resetVars();
