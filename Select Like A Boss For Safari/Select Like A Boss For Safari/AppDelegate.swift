@@ -8,7 +8,8 @@
 
 import Cocoa
 
-@NSApplicationMain
+@main
+@MainActor
 class AppDelegate: NSObject, NSApplicationDelegate {
 	private var mainWindowController: WindowController?
 	

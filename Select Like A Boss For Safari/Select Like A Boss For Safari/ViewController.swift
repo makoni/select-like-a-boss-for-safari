@@ -9,6 +9,21 @@
 import Cocoa
 import SafariServices
 
+private enum ExtensionStateService {
+	static let didUpdateNotification = Notification.Name("ExtensionStateServiceDidUpdate")
+	static let enabledKey = "enabled"
+	
+	static func requestState(for extensionIdentifier: String) {
+		ExtensionStateBridge.requestExtensionState(withIdentifier: extensionIdentifier) { isEnabled, _ in
+			NotificationCenter.default.post(
+				name: didUpdateNotification,
+				object: nil,
+				userInfo: [enabledKey: isEnabled]
+			)
+		}
+	}
+}
+
 class ViewController: NSViewController {
 	@IBOutlet private weak var instructionsLabel: NSTextField!
 	@IBOutlet private weak var openPreferencesButton: NSButton!
@@ -44,6 +59,12 @@ class ViewController: NSViewController {
 			name: NSApplication.didBecomeActiveNotification,
 			object: nil
 		)
+		NotificationCenter.default.addObserver(
+			self,
+			selector: #selector(extensionStateDidUpdate(_:)),
+			name: ExtensionStateService.didUpdateNotification,
+			object: nil
+		)
 		openPreferencesButton.title = openExtensionsButtonTitle
 		updateInstructionsFromExtensionState()
 	}
@@ -55,6 +76,11 @@ class ViewController: NSViewController {
 	@objc private func appDidBecomeActive() {
 		updateInstructionsFromExtensionState()
 	}
+	
+	@objc private func extensionStateDidUpdate(_ notification: Notification) {
+		let isEnabled = notification.userInfo?[ExtensionStateService.enabledKey] as? Bool ?? false
+		instructionsLabel.stringValue = isEnabled ? extensionEnabledText : enableInstructionsText
+	}
 
 	override var representedObject: Any? {
 		didSet {
@@ -63,31 +89,17 @@ class ViewController: NSViewController {
 	}
 	
 	private func updateInstructionsFromExtensionState() {
-		SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: extensionIdentifier) { [weak self] state, error in
-			DispatchQueue.main.async {
-				guard let self else { return }
-				if error != nil {
-					self.instructionsLabel.stringValue = self.enableInstructionsText
-					return
-				}
-				
-				if state?.isEnabled == true {
-					self.instructionsLabel.stringValue = self.extensionEnabledText
-				} else {
-					self.instructionsLabel.stringValue = self.enableInstructionsText
-				}
-			}
-		}
+		instructionsLabel.stringValue = enableInstructionsText
+		ExtensionStateService.requestState(for: extensionIdentifier)
 	}
 	
 	@IBAction func goToPreferenciesButtonTouched(_ sender: Any) {
-		SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionIdentifier) { [weak self] (error) in
+		let extensionIdentifier = self.extensionIdentifier
+		SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionIdentifier) { error in
 			if let error = error {
 				print(error.localizedDescription)
 			}
-			self?.updateInstructionsFromExtensionState()
 		}
 	}
-	
 
 }
