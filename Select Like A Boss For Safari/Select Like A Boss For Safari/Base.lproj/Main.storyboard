@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="24506"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -83,6 +83,13 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                                        <menuItem title="Show Main Window" id="oIv-fQ-6Ij">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="showMainWindow:" target="Voe-Tx-rLC" id="Um6-7m-E9X"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="nOQ-Rn-z9C"/>
                                         <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
@@ -142,31 +149,31 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Select_Like_A_Boss_For_Safari" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="289"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="293"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="wcj-94-4G8">
-                                <rect key="frame" x="110" y="100" width="180" height="180"/>
+                                <rect key="frame" x="110" y="104" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="CQY-Xd-bRx"/>
                                     <constraint firstAttribute="width" secondItem="wcj-94-4G8" secondAttribute="height" multiplier="1:1" id="H8N-cG-P0U"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="image" id="BdO-iu-Tan"/>
                             </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bI4-7r-YFP">
-                                <rect key="frame" x="84" y="24" width="233" height="48"/>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bI4-7r-YFP">
+                                <rect key="frame" x="65" y="24" width="270" height="48"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" id="kle-Hp-97y">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">To enable extension manually:
-1. Safari -&gt; Preferences -&gt; Extensions
-2. Check Select Like A Boss</string>
+                                    <string key="title">Enable in Safari:
+1. Open Safari -&gt; Preferences -&gt; Extensions
+2. Turn on Select Like A Boss</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DMu-bC-EB7">
-                                <rect key="frame" x="127" y="73" width="147" height="32"/>
-                                <buttonCell key="cell" type="push" title="Go to Preferencies" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7eY-z7-qr3">
+                                <rect key="frame" x="118" y="80" width="164" height="24"/>
+                                <buttonCell key="cell" type="push" title="Open Safari Extensions" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7eY-z7-qr3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -185,6 +192,9 @@
                             <constraint firstItem="wcj-94-4G8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="9" id="xu8-b3-kEE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="instructionsLabel" destination="bI4-7r-YFP" id="KW2-Zz-Pjk"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -192,6 +202,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image" width="512" height="512"/>
+        <image name="image" width="761" height="304"/>
     </resources>
 </document>

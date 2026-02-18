@@ -46,8 +46,8 @@
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2021 Sergei Armodin. All rights reserved.</string>
+	<string>Copyright © 2026 Sergey Armodin. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
-	<string>This Safari Extension allows you to select text inside links. Source code: https://github.com/makoni/select-like-a-boss-for-safari</string>
+	<string>This Safari extension allows you to select text inside links. Source code: https://github.com/makoni/select-like-a-boss-for-safari</string>
 </dict>
 </plist>

@@ -10,20 +10,49 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+	private var mainWindowController: WindowController?
+	
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		// Insert code here to initialize your application
+		mainWindowController = NSApp.windows.first?.windowController as? WindowController
 	}
 
 	func applicationWillTerminate(_ aNotification: Notification) {
 		// Insert code here to tear down your application
 	}
+	
+	func registerMainWindowController(_ windowController: WindowController) {
+		mainWindowController = windowController
+	}
+	
+	@IBAction func showMainWindow(_ sender: Any?) {
+		guard let windowController = resolveMainWindowController() else {
+			return
+		}
+		NSApp.activate(ignoringOtherApps: true)
+		windowController.showWindow(sender)
+		windowController.window?.makeKeyAndOrderFront(sender)
+	}
 
 	func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-		if let windowController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "WindowController") as? WindowController {
-			windowController.window?.makeKeyAndOrderFront(nil)
-			return true
+		if flag {
+			return false
 		}
-		return false
+		showMainWindow(nil)
+		return true
+	}
+	
+	private func resolveMainWindowController() -> WindowController? {
+		if let windowController = mainWindowController {
+			return windowController
+		}
+		if let existingWindowController = NSApp.windows.compactMap({ $0.windowController as? WindowController }).first {
+			mainWindowController = existingWindowController
+			return existingWindowController
+		}
+		if let createdWindowController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "WindowController") as? WindowController {
+			mainWindowController = createdWindowController
+			return createdWindowController
+		}
+		return nil
 	}
 }
-
